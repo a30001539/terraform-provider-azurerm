@@ -121,6 +121,27 @@ func resourceArmAnalysisServicesServer() *schema.Resource {
 				Computed: true,
 			},
 
+			"gateway_details": {
+				Type:     schema.TypeMap,
+        Optional: true,
+        Elem: &schema.Resource{
+          Schema: map[string]*schema.Schema{
+            "dmts_cluster_uri": {
+              Type:     schema.TypeString,
+              Required: true,
+            },
+            "gateway_object_id": {
+              Type:         schema.TypeString,
+              Required:     true,
+            },
+            "gateway_resource_id": {
+              Type:         schema.TypeString,
+              Required:     true,
+            },
+          }
+        }
+      },
+
 			"tags": tags.Schema(),
 		},
 	}
