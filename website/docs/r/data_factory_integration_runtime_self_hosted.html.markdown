@@ -35,11 +35,11 @@ resource "azurerm_data_factory_integration_runtime_self_hosted" "example" {
 
 The following arguments are supported:
 
-* `data_factory_name` - (Required) Changing this forces a new Data Factory to be created.
+* `data_factory_name` - (Required) Changing this forces a new Data Factory Integration Runtime to be created.
 
-* `name` - (Required) The name which should be used for this Data Factory. Changing this forces a new Data Factory to be created.
+* `name` - (Required) The name which should be used for this Data Factory. Changing this forces a new Data Factory Integration Runtime to be created.
 
-* `resource_group_name` - (Required) The name of the Resource Group where the Data Factory should exist. Changing this forces a new Data Factory to be created.
+* `resource_group_name` - (Required) The name of the Resource Group where the Data Factory should exist. Changing this forces a new Data Factory Integration Runtime to be created.
 
 ---
 
@@ -51,7 +51,7 @@ The following arguments are supported:
 
 A `rbac_authorization` block supports the following:
 
-* `resource_id` - (Required) The resource identifier of the integration runtime to be shared. Changing this forces a new Data Factory to be created.
+* `resource_id` - (Required) The resource identifier of the integration runtime to be shared. Changing this forces a new Data Factory Integration Runtime to be created.
 
 -> **Please Note**: RBAC Authorization creates a [linked Self-hosted Integration Runtime targeting the Shared Self-hosted Integration Runtime in resource_id](https://docs.microsoft.com/en-us/azure/data-factory/create-shared-self-hosted-integration-runtime-powershell#share-the-self-hosted-integration-runtime-with-another-data-factory). The linked Self-hosted Integration Runtime needs Contributor access granted to the Shared Self-hosted Data Factory. See example [Shared Self-hosted](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/examples/data-factory/shared-self-hosted).
 
